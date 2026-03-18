@@ -1,0 +1,36 @@
+<view class="publish-page container">
+  <view class="publish-header">
+    <view class="section-title">分享新的狗狗友好地点</view>
+    <view class="section-subtitle">先本地存储，适合 MVP 快速验证</view>
+  </view>
+
+  <view class="form-card card">
+    <view class="form-item">
+      <view class="label">地点名称</view>
+      <input class="input" placeholder="例如：南滨路江边草地" value="{{form.name}}" bindinput="handleNameInput" />
+    </view>
+
+    <view class="form-item">
+      <view class="label">标签</view>
+      <input class="input" placeholder="多个标签用中文逗号分隔，如：可带狗，草地，人少" value="{{form.tagsText}}" bindinput="handleTagsInput" />
+      <view class="hint">建议标签：可带狗 / 草地 / 人少 / 风景好 / 适合散步</view>
+    </view>
+
+    <view class="form-item">
+      <view class="label">地点坐标</view>
+      <button class="ghost-button" bindtap="chooseLocation">从地图选择位置</button>
+      <view class="location-preview" wx:if="{{form.address}}">
+        <view class="preview-name">{{form.address}}</view>
+        <view class="preview-coord">{{form.latitude}}, {{form.longitude}}</view>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <view class="label">地点图片</view>
+      <button class="ghost-button" bindtap="chooseImage">选择图片</button>
+      <image wx:if="{{form.cover}}" class="preview-image" src="{{form.cover}}" mode="aspectFill"></image>
+    </view>
+
+    <button class="primary-button submit-button" bindtap="submitLocation">保存到本地</button>
+  </view>
+</view>

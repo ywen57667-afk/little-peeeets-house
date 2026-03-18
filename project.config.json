@@ -1,0 +1,20 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "doggo-map-mvp",
+  "description": "狗狗地图微信小程序 MVP",
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "libVersion": "3.6.3",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "packNpmManually": false,
+    "compileHotReLoad": true,
+    "ignoreUploadUnusedFiles": true
+  },
+  "simulatorType": "wechat",
+  "condition": {}
+}
