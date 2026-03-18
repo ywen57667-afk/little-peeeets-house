@@ -1,0 +1,42 @@
+<view class="detail-page" wx:if="{{location}}">
+  <image class="hero-image" src="{{location.cover}}" mode="aspectFill"></image>
+
+  <view class="content card">
+    <view class="title-row">
+      <view>
+        <view class="title">{{location.name}}</view>
+        <view class="address">{{location.address}}</view>
+      </view>
+      <view class="mini-badge">狗狗友好</view>
+    </view>
+
+    <view class="tag-row">
+      <text class="tag" wx:for="{{location.tags}}" wx:key="*this">{{item}}</text>
+    </view>
+
+    <view class="desc-block">
+      <view class="section-title">地点亮点</view>
+      <view class="desc-text">{{location.description}}</view>
+    </view>
+
+    <view class="comment-block">
+      <view class="section-title">遛狗评论</view>
+      <view class="section-subtitle">当前为前端模拟数据</view>
+
+      <block wx:for="{{comments}}" wx:key="id">
+        <view class="comment-item">
+          <view class="comment-header">
+            <text class="comment-user">{{item.user}}</text>
+            <text class="comment-time">{{item.time}}</text>
+          </view>
+          <view class="comment-content">{{item.content}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class="empty-state" wx:else>
+  <view class="empty-title">未找到该地点</view>
+  <view class="empty-desc">请返回地图页重新选择 marker。</view>
+</view>

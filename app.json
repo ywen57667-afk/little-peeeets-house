@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/publish/publish"
+  ],
+  "window": {
+    "navigationBarTitleText": "狗狗地图",
+    "navigationBarBackgroundColor": "#fffaf8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff6f2",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#8b7280",
+    "selectedColor": "#ff6b81",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
